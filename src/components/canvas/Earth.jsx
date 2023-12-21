@@ -5,11 +5,28 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Earth = () => {
-  const earth = useGLTF("./planet/scene.gltf");
+  const earth = useGLTF("./mail_icon/scene.gltf");
 
   return (
-    <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
-  );
+    <mesh>
+      <hemisphereLight intensity={0.5} groundColor='black' />
+      <spotLight
+        position={[-20, 50, -20]}
+        angle={0.12}
+        penumbra={1}
+        intensity={1}
+        castShadow
+        shadow-mapSize={1024}
+      />
+
+      <pointLight intensity={0.8} />
+      <primitive
+        object={earth.scene}
+        scale={ 0.75}
+        position={ [0, 0, 0]}
+        rotation={[0,-90,0]}
+      />
+    </mesh>  );
 };
 
 const EarthCanvas = () => {
