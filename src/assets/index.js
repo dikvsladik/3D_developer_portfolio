@@ -30,6 +30,15 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import postgresql from "./tech/postgresql.png";
+import azure from "./tech/azure.png";
+import python from "./tech/python.png"
+import gcp from "./tech/gcp.png"
+
+import f1 from "./f1.png"
+import hr from "./hr.png"
+import karpator from "./karpator.png"
+
 export {
   logo,
   backend,
@@ -59,4 +68,11 @@ export {
   carrent,
   jobit,
   tripguide,
+  postgresql,
+  azure,
+  python,
+  gcp,
+  f1,
+  hr,
+  karpator
 };

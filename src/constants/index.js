@@ -23,6 +23,13 @@ import {
   jobit,
   tripguide,
   threejs,
+  postgresql,
+  azure,
+  python,
+  gcp,
+  f1,
+  hr,
+  karpator
 } from "../assets";
 
 export const navLinks = [
@@ -61,56 +68,57 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
+    name: "TypeScript",
+    icon: typescript,
   },
   {
     name: "JavaScript",
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
     name: "React JS",
     icon: reactjs,
+  },//switch this: Python, Azure, GCP, PostgreSQL 
+  {
+    name: "python",
+    icon: python,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Azure",
+    icon: azure,
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "PostgreSQL",
+    icon: postgresql,
   },
   {
     name: "Three JS",
     icon: threejs,
   },
   {
+    name: "HTML",
+    icon: html,
+  },
+  {
+    name: "CSS",
+    icon: css,
+  },
+  {
     name: "git",
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "Node JS",
+    icon: nodejs,
   },
   {
     name: "docker",
     icon: docker,
+  },
+
+  {
+    name: "google cloud platform",
+    icon: gcp,
   },
 ];
 
@@ -122,9 +130,9 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Sept 2020 - Jan 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Developing and maintaining android applications using Kotlin and other related technologies.",
+      "Collaborating with instructors and other students to create high-quality end products.",
+      "Implementing responsive design and ensuring multi-device compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
@@ -135,10 +143,10 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Okt 2022 - Sept 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Creating and sustaining a conversational assistant applications using Python, Microsoft Bot Framework, Azure and other related technologies.",
+      "Working in tandem with multidisciplinary teams, including designers, product managers, and fellow developers to deliver a top-notch product.",
+      "Establishing a multi-functional responsive frontend design for the assistant.",
+      "The production application was a great success with a 70% usage within the company.",
     ],
   },//#383E56
   {
@@ -148,10 +156,10 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Sept 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Building and managing web applications with the use of React.js, MantineUI, and similar technologies.",
+      "Joining forces with diverse teams, including designers, product managers, and peer developers to craft superior products.",
+      "Executing adaptable design and ensuring it works seamlessly on different browsers.",
+      "Engaging in code reviews and offering valuable feedback to other developers.",
     ],
   },
 ];
@@ -185,87 +193,66 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Formula 1 Fan Edition",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "This is a Formula One app that displays various information about the current Formula One season, including driver standings, race schedules, race results, driver information, and world champions. The app is built using Kotlin and Jetpack Compose for the UI.",
+    tags: [
+      {
+        name: "kotlin",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "jetpack compose",
+        color: "green-text-gradient",
+      },
+      {
+        name: "android",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: f1,
+    source_code_link: "https://github.com/dikvsladik/FormulaOneFE",
+  },
+  {
+    name: "Assistant UI",
+    description:
+      "This is a web application that empowers users to interact with a conversational assistant. Its built-in features include showing citations and code highlighting among others.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "fluentui-v9",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "azure",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: karpator,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "HR Assistant",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "The HR Assistant application is a tool that enables quick and efficient searching of resumes, recommendation of similar candidates, as well as the automatic sending of emails.",
     tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
       {
         name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "mantineui",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
+    image: hr,
     source_code_link: "https://github.com/",
   },
 ];

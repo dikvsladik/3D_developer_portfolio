@@ -4,6 +4,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -57,9 +58,13 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+  });
+
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div ref={ref} animate={inView ? 'show' : 'hidden'} variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>
           What I have done so far
         </p>
